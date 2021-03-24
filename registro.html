@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="icon" href="img/image.png" sizes="512x512">
+    <title>Registro</title>
+    <link rel="shortcut icon" rel="image/png" href="img/money.png">
+    <link rel="apple-touch-icon" rel="image/png" href="img/money.png">
+    <link rel="apple-touch-status-image" rel="image/png" href="img/money.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/turbolinks.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body class="main bg-white animated fadeIn">
+
+    <div class="container"></div>
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+
+
+            <div class="pos-f-t">
+                <nav class="navbar navbar-white bg-white">
+                    <span data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <img width="40" src="img/menu.png" alt="">
+                                </span>
+                    <img onclick="history.back()" width="40" src="img/back.png" alt="">
+                </nav>
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-light p-4">
+                        <h2 class="text-muted">Menu</h2>
+
+                        <div class="row justify-content-center mt-2">
+                            <div class="col-0">
+                                <div class="container hover text-center">
+                                    <a href="login.html">
+                                        <img src="img/key.png" alt="">
+                                        <p>Login</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-0">
+                                <div class="container hover text-center">
+                                    <img src="img/new_user.png" alt="">
+                                    <p>Register</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-sm-10">
+                    <center>
+                        <img src="img/key.png" alt="Login" width="100px" class="animated bounceIn mt-5 mb-4">
+                        <h3>Registrate</h3>
+                    </center>
+
+                    <form class="needs-validation" id="register_form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" value="402-3725266-9" placeholder="Escriba su nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cedula">Cedula</label>
+                            <input type="text" class="form-control" name="cedula" id="cedula" value="402-3725266-9" placeholder="Escriba su cedula" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clave">Clave</label>
+                            <input type="password" class="form-control" name="password" id="clave" value="12345" placeholder="Escriba su clave" required>
+                        </div>
+                        <!-- <button type="submit" class="btn btn-primary btn-block">Login</button> -->
+                        <input type="submit" class="btn btn-success btn-block text-white" value="Entrar">
+                        <a onclick="history.back()" class="btn btn-secondary btn-block text-white">Atras</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
