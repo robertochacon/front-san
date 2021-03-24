@@ -1,16 +1,16 @@
 {
-    "name": "Shopy money",
-    "short_name": "Shopy Money",
-    "description": "my fisrt app money",
-    "background_color": "#FCE500",
-    "theme_color": "#D35400",
+    "name": "San",
+    "short_name": "San",
+    "description": "Ahorra tu dinero con en un san!",
+    "background_color": "white",
+    "theme_color": "white",
     "orientation": "portrait",
     "display": "standalone",
     "start_url": "./?utm_source=web_app_manifest",
     "scope": "./",
     "lang": "es-MX",
     "icons": [{
-        "src": "img/image.png",
+        "src": "img/money.png",
         "sizes": "512x512",
         "type": "image/png"
     }]

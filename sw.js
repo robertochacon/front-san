@@ -12,20 +12,27 @@
 const web_url = [
     '/app/index.html',
     '/app/login.html',
+    '/app/chat.html',
+    '/app/dates.html',
+    '/app/help.html',
+    '/app/main.html',
+    '/app/profile.html',
+    '/app/san.html',
+    '/app/setting.html',
     '/app/registro.html',
     '/app/css/style.css',
     '/app/css/animate.css',
     '/app/css/bootstrap.min.css',
     '/app/js/app.js',
     '/app/js/main.js',
-    '/app/img/image.png',
+    '/app/img/money.png',
     '/app/img/login.png',
     '/app/img/register.png',
 ];
 
 //intall app
 self.addEventListener('install', e => {
-    const cachePromise = caches.open('first_wpa-rca')
+    const cachePromise = caches.open('san_wpa-rca')
         .then(cache => {
 
             //local

@@ -22,6 +22,12 @@
 
 <body class="main bg-white">
 
+    <script>
+        if (!localStorage.getItem('token')) {
+            location.href = "login.html";
+        }
+    </script>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-8 col-ms-12">
