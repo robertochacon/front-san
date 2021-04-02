@@ -6,12 +6,13 @@ $(document).ready(function() {
         event.preventDefault();
 
         $.ajax({
-            url: 'http://192.168.0.146/api-san/public/api/auth/sans',
+            url: 'http://api-san.herokuapp.com/api/auth/sans',
             type: 'POST',
             data: $(this).serialize(),
             beforeSend: function() {},
             success: function(res) {
                 console.log(res)
+                getSans()
                 $("#add_san").modal('hide');
             }
         });
@@ -20,7 +21,8 @@ $(document).ready(function() {
 
     function getSans() {
         $.ajax({
-            url: 'http://192.168.0.146/api-san/public/api/auth/sans',
+            url: 'http://api-san.herokuapp.com/api/auth/sans',
+            // url: 'http://192.168.111.176/api-san/public/api/auth/sans',
             type: 'GET',
             beforeSend: function() {
                 $("#datos_san").html('<img src="https://miro.medium.com/max/882/1*9EBHIOzhE1XfMYoKz1JcsQ.gif">');
@@ -45,7 +47,7 @@ $(document).ready(function() {
                         <td>${res.data[i].status}</td>
                         <td>${res.data[i].from}</td>
                         <td>${res.data[i].to}</td>
-                        <td><button onclick="delete_san(${res.data[i].name})" class="btn btn-danger">Eliminar</button></td>
+                        <td><button onclick="delete_san(${res.data[i].id})" class="btn btn-danger">Eliminar</button></td>
                     </tr>`;
                 }
 
@@ -57,16 +59,16 @@ $(document).ready(function() {
         });
     }
 
-    function delete_san(id) {
-        $.ajax({
-            url: 'http://192.168.0.146/api-san/public/api/auth/sans',
-            type: 'DELETE',
-            data: { id: id },
-            beforeSend: function() {},
-            success: function(res) {
-                console.log(res)
-            }
-        });
-    }
-
 });
+
+function delete_san(id) {
+    $.ajax({
+        url: 'http://api-san.herokuapp.com/api/auth/sans',
+        type: 'DELETE',
+        data: { id: id },
+        beforeSend: function() {},
+        success: function(res) {
+            console.log(res)
+        }
+    });
+}

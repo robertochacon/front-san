@@ -4,8 +4,8 @@ $(document).ready(function() {
         event.preventDefault();
 
         $.ajax({
-            // url: 'http://127.0.0.1:8001/api/auth/login',
-            url: 'http://192.168.0.146/api-san/public/api/auth/login',
+            url: 'http://api-san.herokuapp.com/api/auth/login',
+            // url: 'http://192.168.111.176/api-san/public/api/auth/login',
             type: 'POST',
             data: $(this).serialize(),
             beforeSend: function() {},
